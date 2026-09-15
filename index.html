@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo distribuido · Tarea 3</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <script src="js/config.js"></script>
+  <script defer src="js/shell.js"></script>
+</head>
+<body class="shell">
+  <header class="shell-bar">
+    <div class="shell-brand">
+      Catálogo distribuido
+      <small>Tarea 3 · Micro-frontends · EIF-508</small>
+    </div>
+    <nav class="shell-nav" aria-label="Mini-sitios">
+      <button type="button" data-site="home">Inicio</button>
+      <button type="button" data-site="libros">Libros</button>
+      <button type="button" data-site="autores">Autores</button>
+      <button type="button" data-site="editoriales">Editoriales</button>
+      <button type="button" data-site="premios">Premios</button>
+    </nav>
+  </header>
+
+  <iframe id="frame" class="shell-frame" title="Mini-sitio seleccionado" src="home.html"></iframe>
+
+  <footer class="shell-foot">
+    <span>Daniel González Picado</span>
+    <a id="open-tab" href="home.html" target="_blank" rel="noopener">Abrir este mini-sitio en otra pestaña ↗</a>
+  </footer>
+</body>
+</html>

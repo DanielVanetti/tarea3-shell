@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio · Catálogo distribuido</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/estructura.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <script src="js/config.js"></script>
+  <script defer src="js/home.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <span class="brand">Catálogo distribuido</span>
+      <span class="tech">Tarea 3 · Micro-frontends</span>
+    </header>
+
+    <p>
+      Cuatro mini-sitios independientes, cada uno con su propia técnica de front-end, su propio
+      hosting y su propio backend. El shell los carga dentro de un iframe y los enlaces cruzados
+      permiten saltar de un libro a su autor, su editorial o sus premios.
+    </p>
+
+    <div class="sites">
+      <article class="site-card" style="--site-color: #b9b4ad">
+        <h2>Libros</h2>
+        <dl>
+          <dt>Front-end</dt><dd>petite-vue · Vercel</dd>
+          <dt>Backend</dt><dd>Netlify Functions + Neon (PostgreSQL)</dd>
+        </dl>
+        <p class="url" data-url="libros"></p>
+        <a class="button" data-site="libros">Abrir</a>
+      </article>
+
+      <article class="site-card" style="--site-color: #6f4e37">
+        <h2>Autores</h2>
+        <dl>
+          <dt>Front-end</dt><dd>Vue 3 + Vite + vue-router · Netlify</dd>
+          <dt>Backend</dt><dd>Cloudflare Workers + D1 (SQLite)</dd>
+        </dl>
+        <p class="url" data-url="autores"></p>
+        <a class="button" data-site="autores">Abrir</a>
+      </article>
+
+      <article class="site-card" style="--site-color: #5b6b3c">
+        <h2>Editoriales</h2>
+        <dl>
+          <dt>Front-end</dt><dd>Alpine.js · GitHub Pages</dd>
+          <dt>Backend</dt><dd>Vercel Functions + Turso (libSQL)</dd>
+        </dl>
+        <p class="url" data-url="editoriales"></p>
+        <a class="button" data-site="editoriales">Abrir</a>
+      </article>
+
+      <article class="site-card" style="--site-color: #141414">
+        <h2>Premios</h2>
+        <dl>
+          <dt>Front-end</dt><dd>petite-vue · Cloudflare Pages</dd>
+          <dt>Backend</dt><dd>Cloudflare Workers + D1 (SQLite)</dd>
+        </dl>
+        <p class="url" data-url="premios"></p>
+        <a class="button" data-site="premios">Abrir</a>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

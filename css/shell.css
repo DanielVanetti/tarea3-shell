@@ -1,0 +1,102 @@
+/* Shell — gris piedra neutro, para no competir con los colores de los mini-sitios. */
+:root {
+  --bg: #f3f2ef;
+  --surface: #ffffff;
+  --text: #2e2d2b;
+  --heading: #2e2d2b;
+  --muted: #6f6b65;
+  --accent: #6e6a64;
+  --accent-strong: #45423e;
+  --on-accent: #ffffff;
+  --border: #dcd9d3;
+}
+
+html, body.shell { height: 100%; }
+
+body.shell {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.shell-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2.4rem;
+  padding: 1.2rem 2.4rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.shell-brand { font-size: 1.9rem; font-weight: 600; line-height: 1.3; }
+.shell-brand small {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.shell-nav { display: flex; flex-wrap: wrap; gap: .6rem; }
+.shell-nav button { margin: 0; background: var(--surface); border-color: var(--border); color: var(--text); }
+.shell-nav button:hover, .shell-nav button:focus { border-color: var(--accent); color: var(--accent-strong); }
+.shell-nav button.button-primary,
+.shell-nav button.button-primary:hover,
+.shell-nav button.button-primary:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.shell-frame {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.shell-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .4rem 2rem;
+  padding: .8rem 2.4rem;
+  font-size: 1.3rem;
+  color: var(--muted);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+.shell-foot a { color: var(--accent-strong); }
+
+@media (max-width: 550px) {
+  .shell-bar, .shell-foot { padding-left: 1.6rem; padding-right: 1.6rem; }
+  .shell-nav button { padding: 0 1.4rem; }
+}
+
+/* home.html */
+.sites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+}
+.site-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 6px solid var(--site-color);
+  border-radius: 6px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.site-card h2 { font-size: 2.2rem; margin-bottom: .6rem; }
+.site-card dl { margin: 0 0 1.6rem; font-size: 1.4rem; }
+.site-card dt { color: var(--muted); font-weight: 600; font-size: 1.2rem; text-transform: uppercase; letter-spacing: .06em; }
+.site-card dd { margin: 0 0 .8rem; }
+.site-card .url { font-size: 1.2rem; color: var(--muted); word-break: break-all; margin-bottom: 1.2rem; }
+.site-card .button { margin: auto 0 0; }
