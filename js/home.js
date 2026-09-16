@@ -1,4 +1,3 @@
-// Portada: pone las direcciones reales de cada mini-sitio en sus tarjetas.
 // Dentro del shell, "Abrir" le pide al shell que cambie de sitio (así se marca el botón);
 // abierta sola, el enlace funciona como un enlace normal.
 
